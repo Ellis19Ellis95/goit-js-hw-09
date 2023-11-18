@@ -19,7 +19,7 @@ startButton.addEventListener('click', () => {
   startButton.disabled = true;
   intervalId = setInterval(changeColor, 1000);
   
-  // При повторному старті робимо кнопку "Stop" повністю прозорою
+  // При старті забезпечуємо, щоб кнопка "Stop" була повністю прозорою
   stopButton.style.opacity = '1';
 });
 
@@ -34,4 +34,3 @@ stopButton.addEventListener('click', () => {
   const opacity = parseFloat(stopButton.style.opacity);
   stopButton.style.opacity = opacity === 1 ? '0.6' : '1';
 });
-
