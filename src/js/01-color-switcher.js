@@ -26,4 +26,8 @@ stopButton.addEventListener('click', () => {
   if (lastColor) {
     body.style.backgroundColor = lastColor;
   }
+
+  const opacity = parseFloat(stopButton.style.opacity);
+  stopButton.style.opacity = opacity === 1 ? '0.6' : '1';
 });
+
