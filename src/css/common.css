@@ -16,3 +16,13 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* Стилі для блоку з кнопками */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
