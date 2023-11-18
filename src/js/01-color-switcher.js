@@ -18,6 +18,9 @@ function changeColor() {
 startButton.addEventListener('click', () => {
   startButton.disabled = true;
   intervalId = setInterval(changeColor, 1000);
+  
+  // При повторному старті робимо кнопку "Stop" повністю прозорою
+  stopButton.style.opacity = '1';
 });
 
 stopButton.addEventListener('click', () => {
@@ -26,7 +29,8 @@ stopButton.addEventListener('click', () => {
   if (lastColor) {
     body.style.backgroundColor = lastColor;
   }
-
+  
+  // Змінюємо прозорість кнопки "Stop" при натисканні
   const opacity = parseFloat(stopButton.style.opacity);
   stopButton.style.opacity = opacity === 1 ? '0.6' : '1';
 });
